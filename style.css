@@ -82,57 +82,78 @@ h1 {
 }
 
 h1 {
+	
     font-size: 50px;
     margin-top: 50px;
+	
     -webkit-user-select: none;
     -webkit-user-drag: none;
+	
 }
 
 #textCode {
+	
     color:rgb(0, 162, 255);
+	
     margin-bottom: 10px;
+	
     font-size: 30px;
+	
     -webkit-user-select: initial;
+	
 }
 
 .box {
+	
+    background-color: #444444;
+    box-shadow: 0 5px 10px rgb(65, 65, 65);
+	
     display: block;
     max-width: 90%;
-    box-shadow: 0 5px 10px rgb(65, 65, 65);
+    border-radius: 10px;
+	
     justify-content: center;
-    background-color: #444444;
-    width: 400px;
-    height: 200px;
     text-align: center;
     position: relative;
-    border-radius: 10px;
+	
+    width: 400px;
+    height: 200px;
+	
     -webkit-animation:updown 3s infinite alternate;
             animation:updown 3s infinite alternate;
+	
 }
 
 .box:hover {
-    /*width: 410px;
-    height: 210px;
-    margin-bottom: 10vh;*/
+	
     background-color: rgb(67, 67, 67);
+	
     -webkit-animation-play-state:paused;
+	
 }
 
 p {
+	
     font-size: 0;
+	
     visibility: collapse;
+	
 }
 
 @-webkit-keyframes updown{
-    to{
+	
+    to{  
       -webkit-transform:translateY(10px);
               transform:translateY(10px);
     }
+	
   }
   
 @keyframes updown{
+	
   to{
     -webkit-transform:translateY(10px);
             transform:translateY(10px);
   }
+	
 }
