@@ -1,14 +1,16 @@
 'use strict';
 
-regenPassword()
+regenCode()
 
-function generatePassword() {
+function generateCode() {
+    
     let charset = "0123456789";
     let retVal = "";
-    for (var i = 0, n = charset.length; i < 9; ++i) {
-        retVal += charset.charAt(Math.floor(Math.random() * n));
-    }
+    
+    for (let i = 0, n = charset.length; i < 9; ++i) retVal += charset.charAt(Math.floor(Math.random() * n));
+    
     return retVal;
+    
 }
 
 function format(number) {
@@ -16,17 +18,23 @@ function format(number) {
 }
 
 function copytext(el) {
-    var $tmp = $("<textarea>");
+    
+    let $tmp = $("<textarea>");
+    
     $("body").append($tmp);
     $tmp.val($(el).text()).select();
     document.execCommand("copy");
     $tmp.remove();
+    
 }
 
-function regenPassword(){
-    const code = generatePassword();
+function regenCode(){
+    
+    const code = generateCode();
     const codeText = document.getElementById("textCode")
     const hiddenText = document.getElementById("hiddenCode")
+    
     codeText.innerText = format(code);
     hiddenText.innerHTML = code;
+    
 }
