@@ -1,22 +1,86 @@
 
 body {
+
+    background-color: #524f4f;
+
     text-decoration: solid;
     font-family: sans-serif;
+
     margin: 0;
     padding: 0;
+
     display: flex;
-    background-color: #524f4f;
-    box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     min-height: 100vh;
+
 }
 
-h1, a {
-    margin-top: 10px;
+.buttonMenu {
+
+    background-color: #444444;
+    box-shadow: 0 5px 10px rgb(65, 65, 65);
+    color: #FFFF;
+
     text-align: center;
+    justify-content: center;
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    height: 35px;
+     width: 35px;
+     border-radius: 10px;
+
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    font-size: 33px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.buttonMenu:hover {
+
+    background-color: rgb(60, 60, 60);
+
+    cursor: pointer;
+
+}
+
+.menu {
+
+    height: auto;
+
+    padding: 50px 0;
+
+}
+
+.menuUl {
+
+    list-style-type: none;
+
+	padding: 0;
+
+}
+
+.menuUlLi {
+
+    margin: 10px 0;
+
+}
+
+h1 {
+
     color: white;
+
+    margin-top: 10px;
     margin: auto;
+
+    text-align: center;
+    
 }
 
 h1 {
@@ -30,10 +94,10 @@ h1 {
     color:rgb(0, 162, 255);
     margin-bottom: 10px;
     font-size: 30px;
-    -webkit-user-select:initial;
+    -webkit-user-select: initial;
 }
 
-.titleBox {
+.box {
     display: block;
     max-width: 90%;
     box-shadow: 0 5px 10px rgb(65, 65, 65);
@@ -44,9 +108,49 @@ h1 {
     text-align: center;
     position: relative;
     border-radius: 10px;
+    -webkit-animation:updown 3s infinite alternate;
+            animation:updown 3s infinite alternate;
+}
+
+.box:hover {
+    /*width: 410px;
+    height: 210px;
+    margin-bottom: 10vh;*/
+    background-color: rgb(67, 67, 67);
+    -webkit-animation-play-state:paused;
 }
 
 p {
     font-size: 0;
     visibility: collapse;
+}
+
+@-webkit-keyframes updown{
+    to{
+      -webkit-transform:translateY(10px);
+              transform:translateY(10px);
+    }
+  }
+  
+@keyframes updown{
+  to{
+    -webkit-transform:translateY(10px);
+            transform:translateY(10px);
+  }
+}
+
+@-webkit-keyframes back{
+
+    to{
+        position: (1, 1);
+    }
+    
+}
+
+@keyframes back{
+
+    to{
+        position: (1, 1);
+    }
+    
 }
