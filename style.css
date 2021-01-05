@@ -67,9 +67,7 @@ body {
 }
 
 .menuUlLi {
-
     margin: 10px 0;
-
 }
 
 h1 {
@@ -137,20 +135,4 @@ p {
     -webkit-transform:translateY(10px);
             transform:translateY(10px);
   }
-}
-
-@-webkit-keyframes back{
-
-    to{
-        position: (1, 1);
-    }
-    
-}
-
-@keyframes back{
-
-    to{
-        position: (1, 1);
-    }
-    
 }
